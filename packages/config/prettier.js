@@ -1,14 +1,14 @@
 module.exports = {
-  arrowParens: "avoid",
+  arrowParens: 'avoid',
   jsxBracketSameLine: false,
   bracketSpacing: true,
-  trailingComma: "all",
+  trailingComma: 'all',
   singleQuote: true,
   printWidth: 60,
   tabWidth: 2,
   useTabs: false,
   semi: false,
-  proseWrap: "preserve",
+  proseWrap: 'preserve',
   insertPragma: false,
-  requirePragma: false
-};
+  requirePragma: false,
+}
