@@ -1,5 +1,5 @@
-import Head from "next/head";
-import { Logotype } from "../components/logotype";
+import Head from 'next/head'
+import { Logotype } from '../components/logotype'
 
 export default () => (
   <>
@@ -9,23 +9,24 @@ export default () => (
         rel="stylesheet"
       />
     </Head>
+
     <div
       style={{
-        backgroundColor: "#fff",
+        backgroundColor: '#fff',
         // backgroundColor: "#333333",
         // backgroundColor: "#444444",
         margin: 0,
         padding: 0,
-        width: "100vw",
-        height: "100vh",
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        justifyContent: "space-around"
+        width: '100vw',
+        height: '100vh',
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent: 'space-around',
       }}
     >
       <Logotype>Skapa Solutions</Logotype>
       {/* <Logotype>Skapa Consulting AB</Logotype> */}
     </div>
   </>
-);
+)
