@@ -1,5 +1,7 @@
+const tasks = arr => arr.join(' && ')
+
 module.exports = {
   hooks: {
-    'pre-commit': 'npm test',
+    'pre-commit': tasks(['pretty-quick --staged']),
   },
 }
