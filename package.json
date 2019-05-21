@@ -7,6 +7,14 @@
   ],
   "license": "MIT",
   "devDependencies": {
+    "babel-eslint": "9.0.0",
+    "eslint": "5.16.0",
+    "eslint-config-react-app": "4.0.1",
+    "eslint-plugin-flowtype": "2",
+    "eslint-plugin-import": "2.17.2",
+    "eslint-plugin-jsx-a11y": "6.2.1",
+    "eslint-plugin-react": "7.13.0",
+    "eslint-plugin-react-hooks": "1.5.0",
     "husky": "2.3.0",
     "prettier": "1.17.1",
     "pretty-quick": "1.11.0"

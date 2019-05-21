@@ -1,3 +1,5 @@
+import React from 'react'
+
 export function Logotype({ children }) {
   return (
     <span
@@ -5,10 +7,10 @@ export function Logotype({ children }) {
         fontFamily: `"Major Mono Display", monospace`,
         fontSize: 40,
         letterSpacing: 1,
-        color: "#222222"
+        color: '#222222',
       }}
     >
       {children}
     </span>
-  );
+  )
 }
