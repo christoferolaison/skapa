@@ -13,5 +13,8 @@
       "dest": "/web/$1"
     }
   ],
-  "alias": ["skapa"]
+  "alias": ["skapa"],
+  "github": {
+    "autoAlias": false
+  }
 }
