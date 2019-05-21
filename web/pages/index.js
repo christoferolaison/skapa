@@ -9,11 +9,19 @@ export default () => (
         href="https://fonts.googleapis.com/css?family=Major+Mono+Display&display=swap"
         rel="stylesheet"
       />
+      <style>
+        {`
+          * {
+            padding: 0;
+            margin: 0;
+          }
+        `}
+      </style>
     </Head>
 
     <div
       style={{
-        backgroundColor: '#fff',
+        backgroundColor: '#222',
         // backgroundColor: "#333333",
         // backgroundColor: "#444444",
         margin: 0,
