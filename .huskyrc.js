@@ -2,7 +2,9 @@ const tasks = arr => arr.join(' && ')
 
 module.exports = {
   hooks: {
-    'pre-commit': tasks(['pretty-quick --staged']),
-    'pre-push': tasks(['eslint .']),
+    'pre-commit': tasks([
+      'eslint .',
+      'pretty-quick --staged',
+    ]),
   },
 }
