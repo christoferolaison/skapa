@@ -4,7 +4,7 @@ workflow "Deploy on Now" {
 }
 
 # Deploy, and write deployment to file
-action "deploy" {
+action "release" {
   uses = "./release"
   args = "-la"
 }
