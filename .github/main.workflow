@@ -5,4 +5,5 @@ workflow "Setup" {
 
 action "yarn" {
   uses = "./.github/yarn"
+  args = "release"
 }
