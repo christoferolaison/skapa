@@ -1,4 +1,4 @@
-FROM node:lts
+FROM node:12
 
 LABEL com.github.actions.name="Skapa release"
 LABEL com.github.actions.description="Release packges to npm"
