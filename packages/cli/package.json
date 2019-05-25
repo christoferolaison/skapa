@@ -4,5 +4,10 @@
   "bin": {
     "skapa": "index.js"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "execa": "1.0.0",
+    "yargs": "13.2.4",
+    "lerna": "3.14.1"
+  }
 }

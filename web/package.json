@@ -1,5 +1,6 @@
 {
   "name": "skapa-web",
+  "private": true,
   "version": "0.0.0",
   "scripts": {
     "now-build": "next build && next export -o dist",
