@@ -1,6 +1,7 @@
 FROM node:10
 
 RUN yarn
+RUN ls
 
 LABEL version="0.0.0"
 
