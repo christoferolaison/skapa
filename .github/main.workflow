@@ -4,5 +4,5 @@ workflow "Setup" {
 }
 
 action "yarn" {
-  uses = "./yarn"
+  uses = "./yarn/"
 }
