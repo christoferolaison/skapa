@@ -6,6 +6,9 @@
     "web",
     "cli"
   ],
+  "scripts": {
+    "prepublishOnly": "skapa build"
+  },
   "license": "MIT",
   "devDependencies": {
     "babel-eslint": "9.0.0",

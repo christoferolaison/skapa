@@ -20,7 +20,7 @@ function getSkapaConfig() {
 
 function getWorkspaces() {
   const workspaces = JSON.parse(
-    lerna(['list', '--all', '--json']),
+    lerna(['list', '--all', '--json'], {}),
   )
   return workspaces.map(({ location }) => {
     const pkg = readPkg.sync({ cwd: location })
