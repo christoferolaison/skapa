@@ -19,4 +19,7 @@ if [ -n "$NPM_AUTH_TOKEN" ]; then
   chmod 0600 "$NPM_CONFIG_USERCONFIG"
 fi
 
+git config --global user.email "$GH_EMAIL"
+git config --global user.name "$GH_USER"
+
 sh -c "yarn && npx skapa $*"

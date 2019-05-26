@@ -1,8 +1,5 @@
 FROM node:10
 
-RUN git config --global user.email "action-bot@action-bot.com"
-RUN git config --global user.name "action-bot"
-
 LABEL version="0.0.0"
 
 LABEL com.github.actions.name="GitHub Action for Skapa"
