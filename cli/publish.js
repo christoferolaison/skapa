@@ -23,4 +23,5 @@ exports.handler = async function(argv) {
       git(['rev-parse', 'HEAD']).substring(0, 6),
     ].join('-'),
   ])
+  lerna(['publish', 'from-git', '--npm-tag', 'next'])
 }
