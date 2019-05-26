@@ -2,7 +2,7 @@
   "name": "@skapa/config",
   "private": true,
   "skipCompile": true,
-  "version": "0.0.0",
+  "version": "0.0.1",
   "main": "index.js",
   "license": "MIT"
 }
