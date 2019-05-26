@@ -1,0 +1,28 @@
+{
+  "name": "test",
+  "version": "1.0.0",
+  "description": "> TODO: description",
+  "author": "Christofer Olaison <christofer.olaison@mentimeter.com>",
+  "homepage": "https://github.com/christoferolaison/skapa#readme",
+  "license": "ISC",
+  "src": "src/index.js",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.esm.js",
+  "directories": {
+    "lib": "dist",
+    "test": "__tests__"
+  },
+  "files": [
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/christoferolaison/skapa.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/christoferolaison/skapa/issues"
+  }
+}
