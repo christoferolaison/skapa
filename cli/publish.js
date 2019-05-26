@@ -13,6 +13,7 @@ exports.handler = async function(argv) {
     'version',
     '--conventional-commits',
     '--conventional-prerelease',
+    '--no-changelog',
     '--exact',
     '--message',
     'chore: prerelease',
