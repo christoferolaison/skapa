@@ -5,7 +5,7 @@ const findUp = require('find-up')
 // const lerna = args =>
 //   execa('lerna', args, { stdio: 'inherit' })
 
-function lerna(args, opts) {
+function lerna(args, opts = { stdio: 'inherit' }) {
   return execa.sync('lerna', args, opts).stdout
 }
 
