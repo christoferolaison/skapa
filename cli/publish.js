@@ -1,4 +1,4 @@
-const { lerna } = require('./util')
+const { lerna, git } = require('./util')
 
 exports.command = 'publish'
 
@@ -13,5 +13,13 @@ exports.handler = async function(argv) {
     'version',
     '--conventional-commits',
     '--conventional-prerelease',
+    '--exact',
+    '--message',
+    'chore: prerelease',
+    '--preid',
+    [
+      'next',
+      git(['rev-parse', 'HEAD']).substring(0, 6),
+    ].join('-'),
   ])
 }

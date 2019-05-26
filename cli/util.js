@@ -9,6 +9,10 @@ function lerna(args, opts = { stdio: 'inherit' }) {
   return execa.sync('lerna', args, opts).stdout
 }
 
+function git(args, opts) {
+  return execa.sync('git', args, opts).stdout
+}
+
 function getSkapaConfig() {
   const configPath = findUp.sync('skapa.config.js')
   return require(configPath)
@@ -36,6 +40,7 @@ function getWorkspaces() {
 
 module.exports = {
   lerna,
+  git,
   getWorkspaces,
   getSkapaConfig,
 }
