@@ -1,7 +1,7 @@
 FROM node:10
 
-RUN yarn
-RUN ls home
+RUN git config --global user.email "action-bot@action-bot.com"
+RUN git config --global user.name "action-bot"
 
 LABEL version="0.0.0"
 
