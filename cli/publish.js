@@ -16,11 +16,18 @@ exports.handler = async function({ next }) {
       '--conventional-prerelease',
       '--no-changelog',
       '--exact',
+      '--yes',
       '--message',
       'chore: prerelease',
       '--preid',
       git(['rev-parse', '--abbrev-ref', 'HEAD']),
     ])
-    lerna(['publish', 'from-git', '--dist-tag', 'next'])
+    lerna([
+      'publish',
+      'from-git',
+      '--yes',
+      '--dist-tag',
+      'next',
+    ])
   }
 }
