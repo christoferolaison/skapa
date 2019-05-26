@@ -8,20 +8,19 @@ exports.describe = `
 
 exports.builder = yargs => yargs.example('$0 publish')
 
-exports.handler = async function(argv) {
-  lerna([
-    'version',
-    '--conventional-commits',
-    '--conventional-prerelease',
-    '--no-changelog',
-    '--exact',
-    '--message',
-    'chore: prerelease',
-    '--preid',
-    [
-      'next',
-      git(['rev-parse', 'HEAD']).substring(0, 6),
-    ].join('-'),
-  ])
-  lerna(['publish', 'from-git', '--dist-tag', 'next'])
+exports.handler = async function({ next }) {
+  if (next) {
+    lerna([
+      'version',
+      '--conventional-commits',
+      '--conventional-prerelease',
+      '--no-changelog',
+      '--exact',
+      '--message',
+      'chore: prerelease',
+      '--preid',
+      git(['rev-parse', '--abbrev-ref', 'HEAD']),
+    ])
+    lerna(['publish', 'from-git', '--dist-tag', 'next'])
+  }
 }
