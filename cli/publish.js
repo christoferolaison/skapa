@@ -9,12 +9,7 @@ exports.describe = `
 exports.builder = yargs => yargs.example('$0 publish')
 
 exports.handler = async function({ next }) {
-  const versionArgs = [
-    'version',
-    '--exact',
-    '--message',
-    'chore: prerelease',
-  ]
+  const versionArgs = ['version', '--exact']
   const publishArgs = ['publish', 'from-git']
   if (isCI()) {
     versionArgs.push('--yes')
@@ -27,8 +22,18 @@ exports.handler = async function({ next }) {
       '--no-changelog',
       '--preid',
       git(['rev-parse', '--abbrev-ref', 'HEAD']),
+      '--message',
+      'chore: prerelease',
     )
     publishArgs.push('--dist-tag', 'next')
+    lerna(versionArgs)
+    lerna(publishArgs)
+  } else {
+    versionArgs.push(
+      '--conventional-commits',
+      '--message',
+      'chore: release',
+    )
     lerna(versionArgs)
     lerna(publishArgs)
   }
