@@ -5,7 +5,7 @@ workflow "Setup" {
 
 action "yarn" {
   uses = "./.github/yarn"
-  args = "publish --next"
+  args = "build && skapa publish --next"
   secrets = [
     "GITHUB_TOKEN",
     "NPM_AUTH_TOKEN",
