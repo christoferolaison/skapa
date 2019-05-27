@@ -2,8 +2,10 @@ const execa = require('execa')
 const readPkg = require('read-pkg')
 const findUp = require('find-up')
 
-// const lerna = args =>
-//   execa('lerna', args, { stdio: 'inherit' })
+function isCI() {
+  const { GITHUB_ACTION } = process.env
+  return Boolean(GITHUB_ACTION)
+}
 
 function lerna(args, opts = { stdio: 'inherit' }) {
   return execa.sync('lerna', args, opts).stdout
@@ -41,6 +43,7 @@ function getWorkspaces() {
 module.exports = {
   lerna,
   git,
+  isCI,
   getWorkspaces,
   getSkapaConfig,
 }
