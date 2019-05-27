@@ -17,11 +17,11 @@ exports.handler = async function({ next }) {
   ]
 
   if (isCI()) {
-    versionArgs.concat('--yes')
+    versionArgs.push('--yes')
   }
 
   if (next) {
-    versionArgs.concat(
+    versionArgs.push(
       '--conventional-commits',
       '--conventional-prerelease',
       '--no-changelog',
