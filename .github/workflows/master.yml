@@ -39,15 +39,12 @@ jobs:
 
       - name: test
         run: | 
+          git config --global user.email "skapa@bot.com"
+          git config --global user.name "skapa-bot"
           git checkout master
           git push origin master
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Configure GitHub
-        run: |
-          git config --global user.email "skapa@bot.com"
-          git config --global user.name "skapa-bot"
         
       - name: Publish
         run: npx skapa publish
