@@ -1,7 +1,7 @@
 import React from 'react'
 
 function Hej() {
-  return <div>hej</div>
+  return <div>ej</div>
 }
 
 export default Hej
