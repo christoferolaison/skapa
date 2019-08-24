@@ -36,8 +36,8 @@ jobs:
           registry-url: https://registry.npmjs.org/
       - name: Setup
         run: yarn
-      - name: Checkout master
-        run: git checkout master
+      - name: Set remote
+        run: git remote set-url origin git@github.com:christoferolaison/skapa.git
 
       - name: test
         run: git push origin master
