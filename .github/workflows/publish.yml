@@ -33,5 +33,3 @@ jobs:
       - name: Publish
         if: github.ref == 'master'
         run: npx skapa publish
-        env:
-          NODE_AUTH_TOKEN: ${{secrets.npm_token}}
