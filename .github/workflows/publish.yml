@@ -34,5 +34,7 @@ jobs:
         with:
           node-version: 12
           registry-url: https://registry.npmjs.org/
+      - name: Setup
+        run: yarn
       - name: Publish
         run: npx skapa publish
