@@ -4,7 +4,7 @@ module.exports = {
   hooks: {
     'pre-commit': tasks([
       'eslint .',
-      'jest --onlyChanged',
+      'jest --changedSince master',
       'pretty-quick --staged',
     ]),
   },
