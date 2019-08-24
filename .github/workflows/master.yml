@@ -39,6 +39,9 @@ jobs:
       - name: Checkout master
         run: git checkout master
 
+      - name: test
+        run: git push origin master
+
       - name: Configure GitHub
         run: |
           git config --global user.email "skapa@bot.com"
