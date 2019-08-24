@@ -29,6 +29,7 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     steps:
+      - 
       - uses: actions/checkout@v1
       - uses: actions/setup-node@v1
         with:
@@ -36,11 +37,11 @@ jobs:
           registry-url: https://registry.npmjs.org/
       - name: Setup
         run: yarn
-      - name: Set remote
-        run: git remote set-url origin git@github.com:christoferolaison/skapa.git
 
       - name: test
         run: git push origin master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Configure GitHub
         run: |
@@ -49,3 +50,5 @@ jobs:
         
       - name: Publish
         run: npx skapa publish
+      env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
