@@ -17,7 +17,7 @@ jobs:
         with:
           node-version: 12
       - name: Lint & Test
-        uses: ./lint-and-test
+        uses: ./.github/actions/lint-and-test
       - name: Build
         run: npx skapa build
 
