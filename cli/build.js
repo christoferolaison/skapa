@@ -1,7 +1,7 @@
 const path = require('path')
 const babel = require('rollup-plugin-babel')
 const rollup = require('rollup')
-const { lerna, getWorkspaces } = require('./util')
+const { getWorkspaces } = require('./util')
 
 exports.command = 'build'
 
