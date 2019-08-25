@@ -10,8 +10,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
-        with:
-          ref: ${{ github.ref }}
       - uses: actions/setup-node@v1
         with:
           node-version: 12
@@ -28,6 +26,7 @@ jobs:
           git config --global user.email "skapa@bot.com"
           git config --global user.name "skapa-bot"
           git remote set-url origin https://christoferolaison:${GITHUB_TOKEN}@github.com/christoferolaison/skapa.git
+          git checkout "${GITHUB_REF:11}"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Setup npm
