@@ -27,6 +27,7 @@ export default () => (
       }}
     >
       <Logotype>Skapa Consulting</Logotype>
+      <Logotype>Skapa Consulting</Logotype>
     </div>
   </>
 )

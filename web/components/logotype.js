@@ -7,7 +7,7 @@ export function Logotype({ children }) {
         fontFamily: `"Major Mono Display", monospace`,
         fontSize: 22,
         letterSpacing: 1,
-        color: '#222222',
+        color: '#65A899',
       }}
     >
       {children}
