@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.6.1](https://github.com/christoferolaison/skapa/compare/@skapa/cli@0.6.0...@skapa/cli@0.6.1) (2019-08-25)
+
+### Bug Fixes
+
+- --conventional-graduate ([623b883](https://github.com/christoferolaison/skapa/commit/623b883))
+- no push in ci ([a0081b3](https://github.com/christoferolaison/skapa/commit/a0081b3))
+
 # [0.6.0](https://github.com/christoferolaison/skapa/compare/@skapa/cli@0.5.1...@skapa/cli@0.6.0) (2019-08-25)
 
 ### Features

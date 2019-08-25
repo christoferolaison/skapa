@@ -1,7 +1,7 @@
 {
   "name": "skapa-web",
   "private": true,
-  "version": "0.1.0-9a1bfa.1",
+  "version": "0.1.0",
   "scripts": {
     "now-build": "next build && next export -o dist",
     "now-dev": "next -p $PORT"
