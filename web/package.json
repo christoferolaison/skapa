@@ -10,5 +10,8 @@
     "next": "latest",
     "react": "latest",
     "react-dom": "latest"
+  },
+  "devDependencies": {
+    "@babel/preset-flow": "7.0.0"
   }
 }
