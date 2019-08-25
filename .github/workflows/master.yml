@@ -21,6 +21,7 @@ jobs:
         run: |
           yarn lint
           yarn test
+          yarn flow check
       - name: Setup git
         run: |
           git config --global user.email "skapa@bot.com"
