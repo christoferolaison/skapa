@@ -10,22 +10,6 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v1
-      - uses: actions/setup-node@v1
-        with:
-          node-version: 12
-      - name: Setup
-        run: yarn
-      - name: Lint & Test
-        run: |
-          yarn lint
-          yarn test
-      - name: Build
-        run: npx skapa build
-
-  publish-npm:
     needs: build
     runs-on: ubuntu-latest
     steps:
