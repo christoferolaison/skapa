@@ -34,10 +34,8 @@ jobs:
         with:
           node-version: 12
           registry-url: https://registry.npmjs.org/
-      - name: Setup
-        run: yarn
 
-      - name: test
+      - name: Push
         run: | 
           git config --global user.email "skapa@bot.com"
           git config --global user.name "skapa-bot"
@@ -46,7 +44,3 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         
-      - name: Publish
-        run: npx skapa publish
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
