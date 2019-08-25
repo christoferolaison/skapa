@@ -17,10 +17,11 @@ jobs:
       - name: Setup
         run: |
           yarn
-      - name: Lint & Test
+      - name: Lint, Test & Flow
         run: |
           yarn lint
           yarn test
+          yarn flow check
       - name: Setup git
         run: |
           git config --global user.email "skapa@bot.com"
