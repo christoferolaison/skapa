@@ -20,6 +20,7 @@ exports.handler = async function({ next }) {
       '--conventional-commits',
       '--conventional-prerelease',
       '--no-changelog',
+      '--no-push',
       '--preid',
       git(['rev-parse', 'HEAD']).substring(0, 6),
       '--message',
