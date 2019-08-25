@@ -40,7 +40,7 @@ jobs:
           echo //registry.npmjs.org/:_authToken=${NPM_AUTH_TOKEN} >> .npmrc
           npm whoami
         env:
-          GITHUB_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
+          NPM_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
       - name: Publish packages 
         run: |
           npx skapa publish
