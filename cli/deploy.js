@@ -1,4 +1,4 @@
-const { git, isCI, now } = require('./util')
+const { now } = require('./util')
 
 exports.command = 'deploy'
 
