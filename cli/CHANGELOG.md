@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.3.0](https://github.com/christoferolaison/skapa/compare/@skapa/cli@0.2.1...@skapa/cli@0.3.0) (2019-08-25)
+
+### Features
+
+- deploy ([44c5081](https://github.com/christoferolaison/skapa/commit/44c5081))
+
 ## [0.2.1](https://github.com/christoferolaison/skapa/compare/@skapa/cli@0.1.0-master.3...@skapa/cli@0.2.1) (2019-08-25)
 
 ### Bug Fixes
