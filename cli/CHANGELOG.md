@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.1](https://github.com/christoferolaison/skapa/compare/@skapa/cli@0.1.0-master.3...@skapa/cli@0.2.1) (2019-08-25)
+
+### Bug Fixes
+
+- typo ([98c42d9](https://github.com/christoferolaison/skapa/commit/98c42d9))
+- use hash ([74deaf1](https://github.com/christoferolaison/skapa/commit/74deaf1))
+- wrong version ([9245d0d](https://github.com/christoferolaison/skapa/commit/9245d0d))
+
 # [0.1.0-master.3](https://github.com/christoferolaison/skapa/compare/@skapa/cli@0.1.0-master.2...@skapa/cli@0.1.0-master.3) (2019-08-25)
 
 **Note:** Version bump only for package @skapa/cli
