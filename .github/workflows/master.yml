@@ -1,9 +1,6 @@
 name: Master
 
 on:
-  pull_request:
-    branches:
-      - master
   push:
     branches:
       - master
@@ -17,18 +14,18 @@ jobs:
         with:
           node-version: 12
           registry-url: https://registry.npmjs.org/
-      - name: Setup 
+      - name: Setup
         run: |
           yarn
-      - name: Lint & Test 
+      - name: Lint & Test
         run: |
           yarn lint
           yarn test
-      - name: Build packages 
+      - name: Build packages
         run: |
           npx skapa build
       - name: Setup git
-        run: | 
+        run: |
           git config --global user.email "skapa@bot.com"
           git config --global user.name "skapa-bot"
           git remote set-url origin https://christoferolaison:${GITHUB_TOKEN}@github.com/christoferolaison/skapa.git
@@ -41,7 +38,7 @@ jobs:
           npm whoami
         env:
           NPM_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
-      - name: Publish packages 
+      - name: Publish packages
         run: |
           npx skapa publish
-        
+

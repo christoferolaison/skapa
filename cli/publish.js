@@ -21,7 +21,7 @@ exports.handler = async function({ next }) {
       '--conventional-prerelease',
       '--no-changelog',
       '--preid',
-      git(['rev-parse', '--abbrev-ref', 'HEAD']),
+      git(['rev-parse', 'HEAD']).substring(0, 6),,
       '--message',
       'chore: prerelease',
     )
