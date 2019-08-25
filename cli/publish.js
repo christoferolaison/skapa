@@ -22,7 +22,10 @@ exports.handler = async function({ next }) {
       '--no-changelog',
       '--no-push',
       '--preid',
-      git(['rev-parse', 'HEAD']).substring(0, 6),
+      [
+        'next',
+        git(['rev-parse', 'HEAD']).substring(0, 6),
+      ].join('-'),
       '--message',
       'chore: prerelease',
     )
@@ -32,6 +35,7 @@ exports.handler = async function({ next }) {
   } else {
     versionArgs.push(
       '--conventional-commits',
+      '--conventional-graduate',
       '--message',
       'chore: release',
     )
