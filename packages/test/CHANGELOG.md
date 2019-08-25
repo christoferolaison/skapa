@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.2-9a1bfa.1](https://github.com/christoferolaison/skapa/compare/@skapa/test-package@0.2.1...@skapa/test-package@0.2.2-9a1bfa.1) (2019-08-25)
+
+### Bug Fixes
+
+- hello ([45adc24](https://github.com/christoferolaison/skapa/commit/45adc24))
+
 ## [0.2.1](https://github.com/christoferolaison/skapa/compare/@skapa/test-package@0.1.0-master.4...@skapa/test-package@0.2.1) (2019-08-25)
 
 ### Bug Fixes
