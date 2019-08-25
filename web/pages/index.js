@@ -14,8 +14,6 @@ export default () => (
     <div
       style={{
         backgroundColor: '#fff',
-        // backgroundColor: "#333333",
-        // backgroundColor: "#444444",
         margin: 0,
         padding: 0,
         width: '100vw',
@@ -26,7 +24,6 @@ export default () => (
         justifyContent: 'space-around',
       }}
     >
-      <Logotype>Skapa Consulting</Logotype>
       <Logotype>Skapa Consulting</Logotype>
     </div>
   </>
