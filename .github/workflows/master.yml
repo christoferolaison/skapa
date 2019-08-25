@@ -1,4 +1,4 @@
-name: Publish
+name: Master
 
 on:
   pull_request:
@@ -17,16 +17,25 @@ jobs:
         with:
           node-version: 12
           registry-url: https://registry.npmjs.org/
-
-      - name: Push
+      - name: Setup 
+        run: |
+          yarn
+      - name: Lint & Test 
+        run: |
+          yarn lint
+          yarn test
+      - name: Build packages 
+        run: |
+          npx skapa build
+      - name: Setup git
         run: | 
           git config --global user.email "skapa@bot.com"
           git config --global user.name "skapa-bot"
-          git remote -v
           git remote set-url origin https://christoferolaison:${GITHUB_TOKEN}@github.com/christoferolaison/skapa.git
-          git remote -v
           git checkout master
-          git push origin master
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Publish packages 
+        run: |
+          npx skapa publish
         
