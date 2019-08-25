@@ -1,6 +1,6 @@
 {
   "name": "@skapa/cli",
-  "version": "0.1.0-master.2",
+  "version": "0.1.0-master.3",
   "private": true,
   "bin": {
     "skapa": "index.js"
