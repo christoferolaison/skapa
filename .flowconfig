@@ -1,0 +1,12 @@
+[ignore]
+<PROJECT_ROOT>/node_modules/react-ssr-prepass/
+
+[include]
+
+[libs]
+
+[lints]
+
+[options]
+
+[strict]
