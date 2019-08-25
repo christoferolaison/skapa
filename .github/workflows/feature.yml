@@ -26,7 +26,7 @@ jobs:
           git config --global user.email "skapa@bot.com"
           git config --global user.name "skapa-bot"
           git remote set-url origin https://christoferolaison:${GITHUB_TOKEN}@github.com/christoferolaison/skapa.git
-          git checkout -
+          git switch -
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Setup npm
