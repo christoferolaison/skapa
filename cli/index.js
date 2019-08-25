@@ -10,4 +10,5 @@ yargs
   .command(require('./build'))
   .command(require('./publish'))
   .command(require('./clean'))
+  .command(require('./deploy'))
   .help().argv

@@ -15,6 +15,10 @@ function git(args, opts) {
   return execa.sync('git', args, opts).stdout
 }
 
+function now(args, opts) {
+  return execa.sync('now', args, opts).stdout
+}
+
 function getSkapaConfig() {
   const configPath = findUp.sync('skapa.config.js')
   return require(configPath)
@@ -43,6 +47,7 @@ function getWorkspaces() {
 module.exports = {
   lerna,
   git,
+  now,
   isCI,
   getWorkspaces,
   getSkapaConfig,
