@@ -5,7 +5,7 @@ export function Logotype({ children }) {
     <span
       style={{
         fontFamily: `"Major Mono Display", monospace`,
-        fontSize: 40,
+        fontSize: 22,
         letterSpacing: 1,
         color: '#222222',
       }}

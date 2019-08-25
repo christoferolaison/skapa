@@ -26,8 +26,7 @@ export default () => (
         justifyContent: 'space-around',
       }}
     >
-      <Logotype>Skapa Solutions</Logotype>
-      {/* <Logotype>Skapa Consulting AB</Logotype> */}
+      <Logotype>Skapa Consulting</Logotype>
     </div>
   </>
 )
