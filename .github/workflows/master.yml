@@ -41,4 +41,8 @@ jobs:
       - name: Publish packages
         run: |
           npx skapa publish
-
+      - name: Deploy
+        run: |
+          npx skapa deploy
+        env:
+          ZEIT_TOKEN: ${{ secrets.ZEIT_TOKEN }}
