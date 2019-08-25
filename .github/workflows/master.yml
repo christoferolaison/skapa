@@ -23,6 +23,7 @@ jobs:
           git config --global user.email "skapa@bot.com"
           git config --global user.name "skapa-bot"
           git remote -v
+          git remote set-url origin https://christoferolaison:${GITHUB_TOKEN}@github.com/christoferolaison/project.git
           git checkout master
           git push origin master
         env:
