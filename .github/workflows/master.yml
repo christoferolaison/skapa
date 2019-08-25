@@ -40,8 +40,6 @@ jobs:
           npx skapa publish
       - name: Deploy
         run: |
-          sudo rm /usr/local/bin/now
-          yarn global add now
           npx skapa deploy
         env:
           ZEIT_TOKEN: ${{ secrets.ZEIT_TOKEN }}
