@@ -1,0 +1,29 @@
+{
+  "name": "@skapa/system-font",
+  "skipCompile": true,
+  "version": "0.0.0",
+  "description": "System font",
+  "keywords": [
+    "system",
+    "font"
+  ],
+  "homepage": "https://github.com/christoferolaison/skapa#readme",
+  "license": "ISC",
+  "main": "src/index.js",
+  "directories": {
+    "src": "src"
+  },
+  "files": [
+    "src"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/christoferolaison/skapa.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/christoferolaison/skapa/issues"
+  }
+}
