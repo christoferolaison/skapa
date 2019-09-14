@@ -3,6 +3,9 @@
   "skipCompile": true,
   "version": "0.0.0",
   "description": "System font",
+  "publishConfig": {
+    "access": "public"
+  },
   "keywords": [
     "system",
     "font"
