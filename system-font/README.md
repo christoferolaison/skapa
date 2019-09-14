@@ -15,9 +15,9 @@
 ## Usage
 
 ```javascript
-const systemFont = require('@skapa/system-font')
+const { systemFont } = require('@skapa/system-font')
 // or
-import systemFont from '@skapa/system-font'
+import { systemFont } from '@skapa/system-font'
 
 const styles = {
   fontFamily: systemFont,
