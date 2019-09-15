@@ -1,4 +1,6 @@
-import Hej from './Hej'
-import Tja from './Tja'
+// @flow
+
+import { Hej } from './Hej'
+import { Tja } from './Tja'
 export const h = 'h'
 export { Hej, Tja }
