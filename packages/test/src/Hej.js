@@ -1,7 +1,7 @@
+// @flow
+
 import React from 'react'
 
-function Hej() {
+export function Hej() {
   return <div>hej</div>
 }
-
-export default Hej
