@@ -1,5 +1,7 @@
 const path = require('path')
+
 const rimraf = require('rimraf')
+
 const { getWorkspaces, getSkapaConfig } = require('./util')
 
 exports.command = 'clean'
@@ -10,7 +12,7 @@ exports.describe = `
 
 exports.builder = yargs => yargs.example('$0 clean')
 
-exports.handler = async function(argv) {
+exports.handler = async function() {
   const packages = getWorkspaces()
   const config = getSkapaConfig()
   packages.forEach(pkg => {
