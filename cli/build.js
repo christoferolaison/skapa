@@ -1,6 +1,8 @@
 const path = require('path')
+
 const babel = require('rollup-plugin-babel')
 const rollup = require('rollup')
+
 const { getWorkspaces } = require('./util')
 
 exports.command = 'build'
@@ -11,7 +13,7 @@ exports.describe = `
 
 exports.builder = yargs => yargs.example('$0 build')
 
-exports.handler = async function(argv) {
+exports.handler = async function() {
   getWorkspaces()
     .filter(({ shouldSkipCompile }) => !shouldSkipCompile)
     .forEach(async pkg => {
