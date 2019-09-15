@@ -1,1 +1,3 @@
-module.exports = require('@skapa/config/eslint')
+module.exports = {
+  extends: '@skapa',
+}
