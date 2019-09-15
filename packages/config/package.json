@@ -2,7 +2,7 @@
   "name": "@skapa/config",
   "skipCompile": true,
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "eslint.js",
   "license": "MIT",
   "publishConfig": {
     "access": "public"
