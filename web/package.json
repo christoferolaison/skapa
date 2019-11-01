@@ -7,9 +7,14 @@
     "now-dev": "next"
   },
   "dependencies": {
+    "@mdx-js/loader": "^1.5.1",
+    "@mdx-js/react": "^1.5.1",
+    "@next/mdx": "^9.1.2",
     "next": "^9",
+    "prism-react-renderer": "^1.0.2",
     "react": "^16",
-    "react-dom": "^16"
+    "react-dom": "^16",
+    "react-live": "^2.2.1"
   },
   "devDependencies": {
     "@babel/preset-flow": "7.0.0"

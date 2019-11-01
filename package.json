@@ -19,7 +19,7 @@
     "@skapa/eslint-config": "1.0.0",
     "babel-eslint": "9.0.0",
     "babel-jest": "^24.9.0",
-    "flow-bin": "0.106.1",
+    "flow-bin": "0.111.0",
     "husky": "2.3.0",
     "jest": "24.9.0",
     "lerna": "3.14.1",
