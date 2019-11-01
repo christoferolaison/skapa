@@ -1,0 +1,193 @@
+# Create a blog post using Next.js, MDX and Prism
+
+In this post we will use [Next.js](https://nextjs.org/), [MDX](https://mdxjs.com/) and [Prism](https://prismjs.com/) to create... this post.
+
+It assumes that you already have Next.js app up and running.
+If not head over to the [official docs](https://nextjs.org/docs) to get started.
+
+## MDX plugin and webpack loader
+
+We need to add [@next/mdx](https://github.com/zeit/next.js/tree/canary/packages/next-mdx) and
+[@mdx-js/loader](https://github.com/mdx-js/mdx/tree/master/packages/loader) to our project.
+
+```bash
+yarn add @next/mdx @mdx-js/loader
+```
+
+This will tell Next to transform our `.mdx` files using `@mdx-js/loader`. Finally we need Next.js to
+understand the new file format. To do so, add the following to your `next.config.js`
+
+```js
+// next.config.js
+
+const withMDX = require('@next/mdx')()
+
+module.exports = withMDX()
+```
+
+You should now be able to import your `.mdx` files in your `.js` modules.
+You may need to restart the development server.
+
+Create `.mdx` file
+
+```mdx
+# Hello world!
+
+I'm a p.
+```
+
+and import it
+
+```js
+import Example from './example.mdx'
+
+function AExampleBlogPost() {
+  return <Example />
+}
+```
+
+it should yield
+
+# Hello world!
+
+I'm a p
+
+<br />
+<br />
+
+Instead of `import Example from './example.mdx'` we could configure
+Next.js to handle `.mdx` in the `pages` directory and generate a route for us.
+To do so we need to update our `next.config.js`.
+
+```js
+// next.config.js
+
+const withMDX = require('@next/mdx')()
+
+module.exports = withMDX({
+  pageExtensions: ['js', 'jsx', 'mdx'],
+})
+```
+
+we should now have a route at `/example`.
+
+## Create code examples using Prism
+
+Ok, so now we want to show some code nice looking examples.
+
+Turn this
+
+`const a = ''`
+
+into
+
+```js
+const a = ''
+```
+
+First we need to add [`@mdx-js/react`](https://github.com/mdx-js/mdx/tree/master/packages/react) which is implicty added
+by [@mdx-js/loader](https://github.com/mdx-js/mdx/tree/master/packages/loader)
+
+```bash
+yarn add @mdx-js/react
+```
+
+Next we need to create a [custom app component](https://nextjs.org/docs#custom-app) and import
+`MDXProvider` from `@mdx-js/react`.
+
+```js
+import React from 'react'
+import App from 'next/app'
+import { MDXProvider } from '@mdx-js/react'
+
+const components = {
+  code: props => <pre {...props} />,
+}
+
+class MyApp extends App {
+  render() {
+    const { Component, pageProps } = this.props
+    return (
+      <MDXProvider components={components}>
+        <Component {...pageProps} />
+      </MDXProvider>
+    )
+  }
+}
+
+export default MyApp
+```
+
+With this we could style our transpiled MDX using
+react components and for that we will be using [prism-react-renderer](https://github.com/FormidableLabs/prism-react-renderer)
+
+```bash
+yarn add prism-react-renderer
+```
+
+Update `_app.js` with the following
+
+```js
+import React from 'react'
+import App from 'next/app'
+import { MDXProvider } from '@mdx-js/react'
+import Highlight, {
+  defaultProps,
+} from 'prism-react-renderer'
+
+function Code({ children, className }) {
+  const language = className.replace(/language-/, '')
+
+  return (
+    <Highlight
+      {...defaultProps}
+      theme={theme}
+      code={children.trim()}
+      language={language}
+    >
+      {({
+        className,
+        style,
+        tokens,
+        getLineProps,
+        getTokenProps,
+      }) => (
+        <pre className={className} style={style}>
+          {tokens.map((line, i) => (
+            <div
+              key={i}
+              {...getLineProps({ line, key: i })}
+            >
+              {line.map((token, key) => (
+                <span
+                  key={key}
+                  {...getTokenProps({ token, key })}
+                />
+              ))}
+            </div>
+          ))}
+        </pre>
+      )}
+    </Highlight>
+  )
+}
+
+const components = {
+  code: Code,
+}
+
+class MyApp extends App {
+  render() {
+    const { Component, pageProps } = this.props
+    return (
+      <MDXProvider components={components}>
+        <Component {...pageProps} />
+      </MDXProvider>
+    )
+  }
+}
+
+export default MyApp
+```
+
+Voila! We now have code blocks generate from our MDX
