@@ -51,11 +51,6 @@ module.exports = {
         natural: false,
       },
     ],
-    'import/no-default-export': 'error',
-    'import/no-unused-modules': [
-      'error',
-      { unusedExports: true, missingExports: false },
-    ],
     'import/order': [
       'error',
       { 'newlines-between': 'always' },
