@@ -16,7 +16,7 @@
     "@babel/core": "^7.5.5",
     "@babel/preset-env": "^7.5.5",
     "@skapa/config": "1.0.0",
-    "@skapa/eslint-config": "0.0.0",
+    "@skapa/eslint-config": "1.0.0",
     "babel-eslint": "9.0.0",
     "babel-jest": "^24.9.0",
     "flow-bin": "0.106.1",
