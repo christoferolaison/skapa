@@ -12,6 +12,8 @@ export function Layout({ children }: LayoutT) {
       style={{
         maxWidth: 600,
         margin: '40px auto',
+        paddingLeft: 20,
+        paddingRight: 20,
       }}
     >
       {children}
