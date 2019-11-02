@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.2.0](https://github.com/christoferolaison/skapa/compare/skapa-web@0.1.3...skapa-web@0.2.0) (2019-11-02)
+
+### Features
+
+- add blog post ([14a540c](https://github.com/christoferolaison/skapa/commit/14a540c78215c4aff3826f0dfc735c4d57cf662e))
+
 ## [0.1.3](https://github.com/christoferolaison/skapa/compare/skapa-web@0.1.2...skapa-web@0.1.3) (2019-09-16)
 
 **Note:** Version bump only for package skapa-web
