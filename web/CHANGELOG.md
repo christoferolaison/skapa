@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.1](https://github.com/christoferolaison/skapa/compare/skapa-web@0.2.0...skapa-web@0.2.1) (2019-11-02)
+
+### Bug Fixes
+
+- mobile adjustments ([e105793](https://github.com/christoferolaison/skapa/commit/e105793f8dc9d6b5d0ed86a9178bc709f9c2df0e))
+- related links ([31d9cc0](https://github.com/christoferolaison/skapa/commit/31d9cc09fdb0f377c06afbbc0638233581f1a0cc))
+
 # [0.2.0](https://github.com/christoferolaison/skapa/compare/skapa-web@0.1.3...skapa-web@0.2.0) (2019-11-02)
 
 ### Features
