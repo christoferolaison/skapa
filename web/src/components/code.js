@@ -72,6 +72,7 @@ export function Code({
           className={className}
           style={{
             ...style,
+            overflow: 'scroll',
             marginTop: 20,
             marginBottom: 20,
             padding: 16,
