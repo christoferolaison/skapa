@@ -11,6 +11,10 @@
     {
       "src": "/(.*)",
       "dest": "/web/$1.html"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/web"
     }
   ],
   "alias": ["skapa"],
