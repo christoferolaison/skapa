@@ -15,15 +15,12 @@
   "devDependencies": {
     "@babel/core": "^7.5.5",
     "@babel/preset-env": "^7.5.5",
-    "@skapa/config": "1.0.0",
-    "@skapa/eslint-config": "1.0.0",
-    "babel-eslint": "9.0.0",
     "babel-jest": "^24.9.0",
-    "flow-bin": "0.111.0",
-    "husky": "2.3.0",
-    "jest": "24.9.0",
-    "lerna": "3.14.1",
-    "now": "16.4.4",
-    "pretty-quick": "1.11.0"
+    "flow-bin": "^0.111.0",
+    "husky": "^2.3.0",
+    "jest": "^24.9.0",
+    "lerna": "^3.14.1",
+    "now": "^16.4.4",
+    "pretty-quick": "^1.11.0"
   }
 }
