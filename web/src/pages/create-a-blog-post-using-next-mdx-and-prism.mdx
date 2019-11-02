@@ -5,6 +5,10 @@ In this post we will use [Next.js](https://nextjs.org/), [MDX](https://mdxjs.com
 It assumes that you already have Next.js app up and running.
 If not head over to the [official docs](https://nextjs.org/docs) to get started.
 
+## TL;DR
+
+[nextjs-mdx-prism](https://github.com/christoferolaison/nextjs-mdx-prism)
+
 ## MDX plugin and webpack loader
 
 We need to add [@next/mdx](https://github.com/zeit/next.js/tree/canary/packages/next-mdx) and
@@ -85,7 +89,7 @@ into
 const a = ''
 ```
 
-First we need to add [`@mdx-js/react`](https://github.com/mdx-js/mdx/tree/master/packages/react) which is implicty added
+First we need to add [@mdx-js/react](https://github.com/mdx-js/mdx/tree/master/packages/react) which is implicty added
 by [@mdx-js/loader](https://github.com/mdx-js/mdx/tree/master/packages/loader)
 
 ```bash
@@ -194,5 +198,7 @@ Voila! We now have code blocks generate from our MDX 💥
 
 ## Related
 
-- [hj]()
-- tja
+- [MDX syntax highlighting](https://mdxjs.com/guides/syntax-highlighting)
+- [Next.js and MDX](https://mdxjs.com/getting-started/next)
+- [Prism](https://prismjs.com/)
+- [prism-react-renderer](https://github.com/FormidableLabs/prism-react-renderer)
