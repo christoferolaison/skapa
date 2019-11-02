@@ -10,7 +10,7 @@
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "/web/$1"
+      "dest": "/web/$1.html"
     }
   ],
   "alias": ["skapa"],
