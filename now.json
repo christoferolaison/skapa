@@ -9,12 +9,12 @@
   ],
   "routes": [
     {
-      "src": "/(.*)",
-      "dest": "/web/$1.html"
-    },
-    {
       "src": "/",
       "dest": "/web/index.html"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/web/$1.html"
     }
   ],
   "alias": ["skapa"],
