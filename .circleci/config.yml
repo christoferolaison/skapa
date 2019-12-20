@@ -1,7 +1,7 @@
 version: 2
 
 jobs:
-  build:
+  node_modules:
     docker:
       - image: circleci/node:13.4.0
 
@@ -9,22 +9,48 @@ jobs:
       - checkout
 
       - restore_cache:
-          name: Restore Yarn Package Cache
           keys:
             - yarn-packages-{{ checksum "yarn.lock" }}
       - run:
-          name: Install Dependencies
           command: yarn install --frozen-lockfile
 
+      - run:
+          command: yarn autoclean --force
+
       - save_cache:
-          name: Save Yarn Package Cache
           key: yarn-packages-{{ checksum "yarn.lock" }}
           paths:
             - ~/.cache/yarn
-      - run:
-          name: Build skapa-web
-          command: yarn workspace skapa-web run now-build
+            - node_modules
+  build:
+    docker:
+      - image: circleci/node:13.4.0
 
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - node-v1-{{ checksum "package.json" }}-{{ checksum "yarn.lock" }}
       - run:
-          name: Packtrack
+        command: yarn workspace skapa-web run now-build
+
+  packtrack:
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - node-v1-{{ checksum "package.json" }}-{{ checksum "yarn.lock" }}
+      - run:
           command: yarn workspace skapa-web run packtracker-upload --stats=.next/stats.json
+
+workflows:
+  version: 2
+  feature:
+    jobs:
+      - node_modules
+      - build:
+          requires:
+            - node_modules
+      - packtrack:
+          requires:
+            - build
