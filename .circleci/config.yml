@@ -37,6 +37,11 @@ jobs:
       - run:
           command: yarn workspace skapa-web run now-build
 
+      - persist_to_workspace:
+          root: .
+          paths:
+            - .next
+
   packtrack:
     docker:
       - image: circleci/node:13.4.0
@@ -46,6 +51,11 @@ jobs:
       - restore_cache:
           keys:
             - yarn-packages-{{ checksum "yarn.lock" }}
+      - run:
+          command: yarn install --frozen-lockfile
+
+      - attach_workspace:
+          at: .
       - run:
           command: yarn workspace skapa-web run packtracker-upload --stats=.next/stats.json
 
