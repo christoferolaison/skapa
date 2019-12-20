@@ -24,3 +24,7 @@ jobs:
       - run:
           name: Build skapa-web
           command: yarn workspace skapa-web run now-build
+
+      - run:
+          name: Packtrack
+          command: yarn workspace skapa-web run packtracker-upload --stats=.next/stats.json
