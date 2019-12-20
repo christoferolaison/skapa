@@ -21,7 +21,6 @@ jobs:
           key: yarn-packages-{{ checksum "yarn.lock" }}
           paths:
             - ~/.cache/yarn
-            - node_modules
   build:
     docker:
       - image: circleci/node:13.4.0
@@ -31,6 +30,10 @@ jobs:
       - restore_cache:
           keys:
             - yarn-packages-{{ checksum "yarn.lock" }}
+
+      - run:
+          command: yarn install --frozen-lockfile
+
       - run:
           command: yarn workspace skapa-web run now-build
 
