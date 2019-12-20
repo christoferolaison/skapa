@@ -11,6 +11,7 @@
     "@mdx-js/react": "^1.5.1",
     "@next/mdx": "^9.1.2",
     "@packtracker/webpack-plugin": "^2.2.0",
+    "lodash": "^4.17.15",
     "next": "^9.1.2",
     "prism-react-renderer": "^1.0.2",
     "react": "^16.11.0",
