@@ -72,17 +72,17 @@ jobs:
           name: Run flow
           command: yarn flow check
 
-packtrack:
-  <<: *defaults
-  steps:
-    - checkout
-    - restore_cache: *restore-cache
-    - run: *yarn-install
-    - attach_workspace:
-        at: .
-    - run:
-        name: Upload webpack stats to packtracker
-        command: yarn workspace skapa-web run packtracker-upload --stats=.next/stats.json
+  packtrack:
+    <<: *defaults
+    steps:
+      - checkout
+      - restore_cache: *restore-cache
+      - run: *yarn-install
+      - attach_workspace:
+          at: .
+      - run:
+          name: Upload webpack stats to packtracker
+          command: yarn workspace skapa-web run packtracker-upload --stats=.next/stats.json
 
 workflows:
   version: 2
