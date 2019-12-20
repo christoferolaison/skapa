@@ -10,6 +10,16 @@ aliases:
     paths:
       - ~/.cache/yarn
 
+master_only: &master_only
+  filters:
+    branches:
+      only: master
+
+master_ignore: &master_ignore
+  filters:
+    branches:
+      ignore: master
+
 defaults: &defaults
   docker:
     - image: circleci/node:13.4.0
@@ -27,17 +37,13 @@ jobs:
 
   build:
     <<: *defaults
-
     steps:
       - checkout
       - restore_cache: *restore-cache
-
       - run: *yarn-install
-
       - run:
           name: Build Skapa Web
           command: yarn workspace skapa-web run build
-
       - persist_to_workspace:
           root: .
           paths:
@@ -88,21 +94,57 @@ workflows:
   version: 2
   feature:
     jobs:
-      - node_modules
+      - node_modules:
+          <<: *master_ignore
       - unit_and_integration:
+          <<: *master_ignore
           requires:
             - node_modules
       - lint:
+          <<: *master_ignore
           requires:
             - node_modules
       - flow:
+          <<: *master_ignore
           requires:
             - node_modules
       - build:
+          <<: *master_ignore
           requires:
             - unit_and_integration
             - lint
             - flow
       - packtrack:
+          <<: *master_ignore
           requires:
             - build
+  master:
+    jobs:
+      - node_modules:
+          <<: *master_only
+      - unit_and_integration:
+          <<: *master_only
+          requires:
+            - node_modules
+      - lint:
+          <<: *master_only
+          requires:
+            - node_modules
+      - flow:
+          <<: *master_only
+          requires:
+            - node_modules
+      - build:
+          <<: *master_only
+          requires:
+            - unit_and_integration
+            - lint
+            - flow
+      - packtrack:
+          <<: *master_only
+          requires:
+            - build
+      - stage:
+          <<: *master_only
+          requires:
+            - packtrack
