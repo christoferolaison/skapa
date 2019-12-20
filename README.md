@@ -1,1 +1,1 @@
-# Skapa Consulting
+# Skapa
