@@ -1,11 +1,10 @@
 // @flow
 
 import React from 'react'
-import _ from 'lodash'
 
 import { Heading } from '../components/heading'
 import { Link } from '../components/link'
-console.log(_)
+
 export default function Index() {
   return (
     <>
