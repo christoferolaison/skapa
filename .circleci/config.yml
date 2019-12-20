@@ -36,7 +36,7 @@ jobs:
 
       - run:
           name: Build Skapa Web
-          command: yarn workspace skapa-web run now-build
+          command: yarn workspace skapa-web run build
 
       - persist_to_workspace:
           root: .

@@ -3,8 +3,8 @@
   "private": true,
   "version": "0.2.1",
   "scripts": {
-    "now-build": "next build && next export -o dist",
-    "now-dev": "next"
+    "build": "next build",
+    "dev": "next"
   },
   "dependencies": {
     "@mdx-js/loader": "^1.5.1",
