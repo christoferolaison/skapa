@@ -32,7 +32,7 @@ jobs:
           keys:
             - node-v1-{{ checksum "package.json" }}-{{ checksum "yarn.lock" }}
       - run:
-        command: yarn workspace skapa-web run now-build
+          command: yarn workspace skapa-web run now-build
 
   packtrack:
     docker:
