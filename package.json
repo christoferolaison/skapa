@@ -9,7 +9,9 @@
   "scripts": {
     "test": "jest",
     "lint": "eslint .",
-    "prepublishOnly": "skapa build"
+    "prepublishOnly": "skapa build",
+    "start": "yarn workspace skapa-web run next start -p $PORT",
+    "heroku-postbuild": "yarn workspace skapa-web run next build"
   },
   "license": "MIT",
   "devDependencies": {
