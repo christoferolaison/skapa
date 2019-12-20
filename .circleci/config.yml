@@ -30,7 +30,7 @@ jobs:
       - checkout
       - restore_cache:
           keys:
-            - node-v1-{{ checksum "package.json" }}-{{ checksum "yarn.lock" }}
+            - yarn-packages-{{ checksum "yarn.lock" }}
       - run:
           command: yarn workspace skapa-web run now-build
 
@@ -42,7 +42,7 @@ jobs:
       - checkout
       - restore_cache:
           keys:
-            - node-v1-{{ checksum "package.json" }}-{{ checksum "yarn.lock" }}
+            - yarn-packages-{{ checksum "yarn.lock" }}
       - run:
           command: yarn workspace skapa-web run packtracker-upload --stats=.next/stats.json
 
