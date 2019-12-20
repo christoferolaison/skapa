@@ -35,6 +35,9 @@ jobs:
         command: yarn workspace skapa-web run now-build
 
   packtrack:
+    docker:
+      - image: circleci/node:13.4.0
+
     steps:
       - checkout
       - restore_cache:
